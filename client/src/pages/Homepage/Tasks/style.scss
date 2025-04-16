@@ -1,0 +1,59 @@
+.task-box, .input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: max-content;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 15px;
+
+}
+
+.task-box {
+    width: clamp(500px, 90vw, 800px);
+    background-color: grey;
+    font-size: 1.5rem;
+
+    p {
+        margin: 0;
+    }
+}
+
+.input {
+
+
+    width: min(92vw, 830px);
+    background-color: white;
+    input {
+        width: 90%;
+
+        background: none;
+        border: none;
+    
+        font-size: 2rem;
+        
+        &::placeholder {
+            color: #0004;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+button {
+    background: none;
+    margin: 0;
+    border: none;
+    color: #0004;
+
+    font-size: 2rem;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}

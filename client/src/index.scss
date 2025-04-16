@@ -1,0 +1,11 @@
+$font-stack: system-ui, Avenir, Helvetica, Arial, sans-serif;
+$color: rgba(255, 255, 255, 0.87);
+$bg: #242424;
+$fsize: 20px;
+
+:root {
+  font-family: $font-stack;
+  font-size: $fsize;
+  color: $color;
+  background-color: $bg;
+}

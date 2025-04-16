@@ -12,6 +12,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+
+
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 mongoose.connect(MONGODB_URI)
