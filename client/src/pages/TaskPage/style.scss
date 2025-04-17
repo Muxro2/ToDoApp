@@ -12,6 +12,7 @@ body {
 .center {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 100vw;
 }
@@ -27,10 +28,20 @@ body {
     border-radius: 15px;
 }
 
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 0;
+    list-style: none;
+}
+
 .task-box {
     position: relative;
     height: 2.5rem;
-    width: clamp(500px, 90vw, 800px);
+    width: min(100%, 800px);
     padding-inline: 0;
     background-color: $blue;
     font-size: 1.5rem;
@@ -81,11 +92,11 @@ body {
 .input {
     padding-inline: 20px;
     height: 3rem;
-    width: min(92vw, 830px);
+    width: min(92%, 830px);
     background-color: $light_blue;
     input {
         width: 90%;
-
+        color: white;
         background: none;
         border: none;
     
@@ -121,7 +132,3 @@ button {
     font-size: 2rem;
 }
 
-ul {
-    padding: 0;
-    list-style: none;
-}
