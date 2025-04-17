@@ -6,10 +6,10 @@ const router = express.Router();
 router.get("/", (req, res) => {
     TaskModel.find({})
     .then(result => {
-        res.json(result)
+        res.send(result)
     })
     .catch(err => {
-        console.log(err)
+        res.send(err)
     });
 });
 
@@ -25,13 +25,25 @@ router.post("/", (req, res) => {
     }
 })
 
-router.delete("/", (req, res) => {
-    const { _id } = req.body;
+router.delete("/:id", (req, res) => {
+    const { id } = req.params;
 
-    TaskModel.deleteOne({_id: _id})
+    TaskModel.deleteOne({_id: id})
     .then(result => {
         res.send(result)
     });
+})
+
+router.put("/:id", (req, res) => {
+    const { id } = req.params;
+    TaskModel.findByIdAndUpdate(
+        id,
+        req.body,
+        { new: true }
+    )
+    .then(result => {
+        res.send(result)
+    })
 })
 
 export default router;

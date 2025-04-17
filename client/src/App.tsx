@@ -1,13 +1,10 @@
-import Homepage from './pages/Homepage/Homepage.tsx';
+import Tasks from './pages/Tasks/Tasks.tsx'
 
 import './App.scss'
 
 function App() {
-
-
-
   return (
-    <Homepage />
+    <Tasks />
   )
 }
 
