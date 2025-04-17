@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import TaskBox from "./TaskBox.tsx";
+import TaskBox from "./Tasks.tsx";
 import axios from "axios";
 
 const API_URL = "http://localhost:8080/tasks"

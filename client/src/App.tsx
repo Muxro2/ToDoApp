@@ -1,4 +1,4 @@
-import Tasks from './pages/Tasks/Tasks.tsx'
+import Tasks from './pages/TaskPage/TaskPage.tsx'
 
 import './App.scss'
 

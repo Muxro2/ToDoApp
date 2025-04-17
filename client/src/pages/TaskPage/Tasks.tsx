@@ -1,5 +1,5 @@
 import React from 'react';
-import './TaskBox.tsx';
+import './Tasks.tsx';
 import './style.scss'
 
 interface Task {
@@ -37,28 +37,30 @@ export default function TaskBox({
         <ul>
             {tasks.map(task => {
                 return (
-                    <li key={task._id} className="task-box" style={{backgroundColor: task.completed ?  "green" : "grey"}} onClick={(e) => {
+                    <li key={task._id} className={task.completed ?  "checked task-box" : "task-box"} onClick={(e) => {
                         startEditing(task._id)
                         setEditingTask(task.task)
                     }}>
+
                         <input 
                         type="checkbox" 
                         onClick={e => e.stopPropagation()}
                         checked={task.completed}
                         onChange={() => updateTask(task._id, { completed: !task.completed})}/>
+
                         {editingTaskId === task._id ? (
                             <>
-                                <input type="text" value={editingTask} onChange={handleEditChange} />
-                                <button onClick={e => {
+                                <input type="text" value={editingTask} onChange={handleEditChange} autoFocus/>
+                                <button className="modify" onClick={e => {
                                     e.stopPropagation()
                                     updateTask(task._id, { task: editingTask })
                                     setEditingTaskId(null)
-                                }}>⎷</button>
+                                }}>→</button>
                             </>
                         ) : (
                             <>
                                 <p>{task.task}</p>
-                                <button onClick={e => {
+                                <button className="modify" onClick={e => {
                                     e.stopPropagation()
                                     deleteTask(task._id)
                                 }}>x</button>

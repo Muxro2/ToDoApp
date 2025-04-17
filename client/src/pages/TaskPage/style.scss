@@ -1,0 +1,127 @@
+$font-stack: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+$dark_blue: #14213D;
+$blue: #32436B;
+$light_blue: #506185;
+$green: #4EA039;
+
+body {
+    background-color: $dark_blue;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.task-box, .input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: max-content;
+    margin: 10px 0;
+    border-radius: 15px;
+}
+
+.task-box {
+    position: relative;
+    height: 2.5rem;
+    width: clamp(500px, 90vw, 800px);
+    padding-inline: 0;
+    background-color: $blue;
+    font-size: 1.5rem;
+
+    input[type="checkbox"] {
+        appearance: none;
+        accent-color: $green;
+        height: 100%;
+        aspect-ratio: 1;
+        margin: 0;
+        padding: 0;
+
+        &::after{
+            content: "⎷";
+            display: block;
+            height: 100%;
+            width: 100%;
+            font-size: 2rem;
+            text-align: center;
+            color: #2227;
+            background-color: #ddd3;
+            border-radius: 15px 0 0 15px;
+        }
+    }
+
+    p, input[type="text"] {
+        margin-inline: 2%;
+        flex: 1;
+        background: none;
+        border: none;
+        text-align: center;
+        font-family: $font-stack;
+        color: white;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        outline: none;
+    }
+
+    .modify {
+        height: 100%;
+        aspect-ratio: 1;
+        background-color: #ddd3;
+        color: #2227;
+        border-radius: 0 15px 15px 0;
+    }
+}
+
+.input {
+    padding-inline: 20px;
+    height: 3rem;
+    width: min(92vw, 830px);
+    background-color: $light_blue;
+    input {
+        width: 90%;
+
+        background: none;
+        border: none;
+    
+        font-size: 2rem;
+        
+        &::placeholder {
+            color: $blue;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+    button{
+        background: none;
+        line-height: 0;
+        height: 70%;
+        color: $blue;
+        border-left: 2px solid $blue;
+        padding-left: 1rem;
+    }
+}
+
+.checked{
+    background-color: $green;
+}
+
+button {
+    margin: 0;
+    border: none;
+
+
+    font-size: 2rem;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
