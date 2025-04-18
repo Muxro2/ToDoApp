@@ -1,9 +1,18 @@
-$font-stack: system-ui, Avenir, Helvetica, Arial, sans-serif;
-
 $dark_blue: #14213D;
 $blue: #32436B;
 $light_blue: #506185;
 $green: #4EA039;
+$color: rgba(255, 255, 255, 0.87);
+$bg: #242424;
+
+$font-stack: system-ui, Avenir, Helvetica, Arial, sans-serif;
+$fsize: 20px;
+
+:root {
+  font-family: $font-stack;
+  font-size: $fsize;
+  color: $color;
+}
 
 body {
     background-color: $dark_blue;
@@ -14,7 +23,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 100dvw;
 }
 
 .task-box, .input {
@@ -58,7 +67,7 @@ ul {
             content: "⎷";
             display: block;
             height: 100%;
-            width: 100%;
+            aspect-ratio: 1;
             font-size: 2rem;
             text-align: center;
             color: #2227;
@@ -75,7 +84,7 @@ ul {
         text-align: center;
         font-family: $font-stack;
         color: white;
-        font-size: 1.5rem;
+        font-size: 2rem;
         letter-spacing: 2px;
         outline: none;
     }
@@ -132,3 +141,9 @@ button {
     font-size: 2rem;
 }
 
+
+@media screen and (max-width: 575px) {
+    p, input {
+        font-size: 1rem !important;
+    }
+}
