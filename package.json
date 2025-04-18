@@ -1,0 +1,23 @@
+{
+  "name": "todoapp",
+  "version": "1.0.0",
+  "description": "MERN To do app",
+  "main": "server/index.js",
+  "scripts": {
+    "client": "cd client && npm run dev",
+    "server": "cd server && npm run dev",
+    "install": "cd server && npm i && cd ../client && npm i --production=false",
+    "build": "cd client && npm run build",
+    "render-build": "npm install && npm build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Muxro2/ToDoApp.git"
+  },
+  "author": "Mo Roshid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Muxro2/ToDoApp/issues"
+  },
+  "homepage": "https://github.com/Muxro2/ToDoApp#readme"
+}
