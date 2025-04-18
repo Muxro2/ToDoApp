@@ -59,7 +59,7 @@ export default function TaskBox({
                             </>
                         ) : (
                             <>
-                                <p>{task.task}</p>
+                                <span>{task.task}</span>
                                 <button className="modify" onClick={e => {
                                     e.stopPropagation()
                                     deleteTask(task._id)

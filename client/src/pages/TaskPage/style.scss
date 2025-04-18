@@ -26,85 +26,24 @@ body {
     width: 100dvw;
 }
 
+
+
 .task-box, .input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    height: max-content;
-    margin: 10px 0;
+    margin-block: 10px;
     border-radius: 15px;
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    padding: 0;
-    list-style: none;
-}
-
-.task-box {
-    position: relative;
-    height: 2.5rem;
-    width: min(100%, 800px);
-    padding-inline: 0;
-    background-color: $blue;
-    font-size: 1.5rem;
-
-    input[type="checkbox"] {
-        appearance: none;
-        accent-color: $green;
-        height: 100%;
-        aspect-ratio: 1;
-        margin: 0;
-        padding: 0;
-
-        &::after{
-            content: "⎷";
-            display: block;
-            height: 100%;
-            aspect-ratio: 1;
-            font-size: 2rem;
-            text-align: center;
-            color: #2227;
-            background-color: #ddd3;
-            border-radius: 15px 0 0 15px;
-        }
-    }
-
-    p, input[type="text"] {
-        margin-inline: 2%;
-        flex: 1;
-        background: none;
-        border: none;
-        text-align: center;
-        font-family: $font-stack;
-        color: white;
-        font-size: 2rem;
-        letter-spacing: 2px;
-        outline: none;
-    }
-
-    .modify {
-        height: 100%;
-        aspect-ratio: 1;
-        background-color: #ddd3;
-        color: #2227;
-        border-radius: 0 15px 15px 0;
-    }
-}
-
 .input {
-    padding-inline: 20px;
-    height: 3rem;
-    width: min(92%, 830px);
+    padding-block: .5rem;
+    padding-left: 20px;
+    height: 2rem;
+    width: min(90%, 830px);
     background-color: $light_blue;
     input {
-        width: 90%;
         color: white;
         background: none;
         border: none;
@@ -121,11 +60,70 @@ ul {
     }
     button{
         background: none;
-        line-height: 0;
-        height: 70%;
+        height: 80%;
+        width: 60px;
         color: $blue;
         border-left: 2px solid $blue;
-        padding-left: 1rem;
+        line-height: 0;
+        
+    }
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 0;
+    list-style: none;
+}
+li {
+    height: max-content;
+    width: 100%;
+    padding-inline: 0;
+    background-color: $blue;
+    font-size: 1.5rem;
+
+    input[type="checkbox"] {
+        appearance: none;
+        
+        margin: 0;
+        padding: 0;
+
+        &::after{
+            content: "⎷";
+            display: block;
+            height: 100%;
+            width: 50px;
+            font-size: 2rem;
+            text-align: center;
+            color: #2227;
+            background-color: #ddd3;
+            border-radius: 15px;
+        }
+    }
+
+    span, input[type="text"] {
+        height: max-content;
+        margin-inline: 2%;
+        flex: 1;
+        background: none;
+        border: none;
+        text-align: center;
+        font-family: $font-stack;
+        color: white;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        outline: none;
+    }
+
+    .modify {
+        height: 100%;
+        width: 50px;
+        background-color: #ddd3;
+        color: #2227;
+        border-radius: 15px;
     }
 }
 
@@ -143,7 +141,7 @@ button {
 
 
 @media screen and (max-width: 575px) {
-    p, input {
+    span, input {
         font-size: 1rem !important;
     }
 }

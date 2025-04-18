@@ -88,7 +88,7 @@ export default function Tasks() {
         <div className="input">
             <input
             type="text" 
-            placeholder="Scrub the chicken..." 
+            placeholder="Morning run..." 
             onChange={e => setTask(e.target.value)}
             value={task}
             required
