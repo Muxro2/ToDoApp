@@ -37,7 +37,7 @@ export default function TaskBox({
         <ul>
             {tasks.map(task => {
                 return (
-                    <li key={task._id} className={task.completed ?  "checked task-box" : "task-box"} onClick={(e) => {
+                    <li key={task._id} className={task.completed ?  "checked task-box" : "task-box"} onClick={() => {
                         startEditing(task._id)
                         setEditingTask(task.task)
                     }}>
