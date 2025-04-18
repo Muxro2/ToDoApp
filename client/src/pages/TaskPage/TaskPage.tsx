@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import TaskBox from "./Tasks.tsx";
 import axios from "axios";
 
-const API_URL = "http://localhost:8080/tasks"
+const API_URL = "https://todoapp-2d3a.onrender.com/tasks"
 
 interface Task {
     _id: string,
