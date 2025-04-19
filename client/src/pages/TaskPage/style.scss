@@ -135,12 +135,16 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 50px;
         max-width: 50px;
         background-color: #ddd3;
         color: #2227;
         border-radius: 15px;
         line-height: normal;
+        letter-spacing: normal;
         text-align: center;
+        overflow-x: hidden;
+        padding: 0;
     }
 }
 
