@@ -26,18 +26,13 @@ body {
     width: 100dvw;
 }
 
-
-
-.task-box, .input {
+.input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-block: 10px;
     border-radius: 15px;
-}
-
-.input {
+    margin-block: 20px;
     padding-block: .5rem;
     padding-left: 20px;
     height: 2rem;
@@ -61,7 +56,7 @@ body {
     }
     button{
         background: none;
-        height: 80%;
+        height: 1.5rem;
         width: 60px;
         color: $blue;
         border-left: 2px solid $blue;
@@ -75,12 +70,17 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
     width: 90%;
     padding: 0;
     list-style: none;
 }
-li {
-    height: max-content;
+.task-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    border-radius: 15px;
     width: 100%;
     padding-inline: 0;
     background-color: $blue;
@@ -88,29 +88,30 @@ li {
 
     input[type="checkbox"] {
         appearance: none;
-        height: 100%;
+        height: auto;
         width: 50px;
         margin: 0;
-        padding: 0;
+
+
 
         &::after{
             content: "⎷";
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100%;
             width: 100%;
             font-size: 2rem;
-            text-align: center;
             color: #2227;
             background-color: #ddd3;
             border-radius: 15px;
+            text-align: center;
         }
     }
 
     span, input[type="text"] {
         flex: 1;
-        height: max-content;
-        margin-inline: 2%;
-        flex: 1;
+        margin: 10px;
         background: none;
         border: none;
         text-align: center;
@@ -124,11 +125,15 @@ li {
     }
 
     .modify {
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 50px;
         background-color: #ddd3;
         color: #2227;
         border-radius: 15px;
+        line-height: normal;
+        text-align: center;
     }
 }
 
