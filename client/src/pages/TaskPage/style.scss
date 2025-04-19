@@ -26,6 +26,8 @@ body {
     width: 100dvw;
 }
 
+
+
 .input {
     display: flex;
     flex-direction: row;
@@ -55,6 +57,7 @@ body {
         }
     }
     button{
+        font-size: 2rem;
         background: none;
         height: 1.5rem;
         width: 60px;
@@ -64,6 +67,9 @@ body {
         
     }
 }
+
+
+
 
 ul {
     display: flex;
@@ -125,10 +131,11 @@ ul {
     }
 
     .modify {
+        font-size: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 50px;
+        max-width: 50px;
         background-color: #ddd3;
         color: #2227;
         border-radius: 15px;
@@ -144,9 +151,6 @@ ul {
 button {
     margin: 0;
     border: none;
-
-
-    font-size: 2rem;
 }
 
 
